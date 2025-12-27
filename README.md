@@ -83,3 +83,4 @@ Under Apache 2.0 section 6, specifically:
 * You are **FORBIDDEN** to use `manager/src/main/res/mipmap*/ic_launcher*.png` image files, unless for displaying Kagemusha itself.
 
 * You are **FORBIDDEN** to use `Kagemusha` as app name or use `moe.kagemusha.privileged.api` as application id or declare `moe.kagemusha.manager.permission.*` permission.
+  The app is based on Shizuku code
