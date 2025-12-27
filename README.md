@@ -1,4 +1,4 @@
-# Shizuku
+# Kagemusha
 
 ## Background
 
@@ -11,13 +11,13 @@ This method has very big disadvantages:
 3. The possibility is limited to available commands
 4. Even if ADB has sufficient permissions, the app requires root privileges to run
 
-Shizuku uses a completely different way. See detailed description below.
+Kagemusha uses a completely different way. See detailed description below.
 
 ## User guide & Download
 
-<https://shizuku.rikka.app/>
+Download from the official Github reposistory
 
-## How does Shizuku work?
+## How does Kagemusha work?
 
 First, we need to talk about how app use system APIs. For example, if the app wants to get installed apps, we all know we should use `PackageManager#getInstalledPackages()`. This is actually an interprocess communication (IPC) process of the app process and system server process, just the Android framework did the inner works for us.
 
@@ -65,7 +65,7 @@ https://github.com/RikkaApps/Shizuku-API#migration-guide-for-existing-applicatio
 
    * `SystemServiceHelper.getTransactionCode` may not get the correct transaction code, such as `android.content.pm.IPackageManager$Stub.TRANSACTION_getInstalledPackages` does not exist on API 25 and there is `android.content.pm.IPackageManager$Stub.TRANSACTION_getInstalledPackages_47` (this situation has been dealt with, but it is not excluded that there may be other circumstances). This problem is not encountered with the `ShizukuBinderWrapper` method.
 
-## Developing Shizuku itself
+## Developing Kagemusha itself
 
 ### Build
 
@@ -80,6 +80,6 @@ All code files in this project are licensed under Apache 2.0
 
 Under Apache 2.0 section 6, specifically:
 
-* You are **FORBIDDEN** to use `manager/src/main/res/mipmap*/ic_launcher*.png` image files, unless for displaying Shizuku itself.
+* You are **FORBIDDEN** to use `manager/src/main/res/mipmap*/ic_launcher*.png` image files, unless for displaying Kagemusha itself.
 
-* You are **FORBIDDEN** to use `Shizuku` as app name or use `moe.shizuku.privileged.api` as application id or declare `moe.shizuku.manager.permission.*` permission.
+* You are **FORBIDDEN** to use `Kagemusha` as app name or use `moe.kagemusha.privileged.api` as application id or declare `moe.kagemusha.manager.permission.*` permission.
